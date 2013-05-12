@@ -27,9 +27,8 @@ smtp_password = 'smtp password here'
 smtp_debug_level = 1;  # 1 or 0 works
 
 # Email properties
-sender = 'mauget@mindspring.com'
-#receivers = ['mauget@mindspring.com', 'mauget@gmail.com']
-receivers = ['mauget@mindspring.com']
+sender = 'user@email.net'
+receivers = ['sombody@someorg.org', 'somebodyelse@otherplace.com']
 
 message_template = """From: %s
 To: Somebody <sombody@someorg.org>
