@@ -54,3 +54,58 @@ issue `./ipchecker.py` or invoke `python ipchecker.py`.
 If `props.do_run = True`, then the checking process will happen forever at intervals
 defined by the number of seconds in `props.interval`. For example `props.interval = 30*60`
 will cause the process to carry out its check once per half hour._
+
+##Configuration Notes##
+
+###Target DNS###
+
+`dns_name = 'google.com'```
+
+###Checking interval in seconds###
+
+`interval = 60*30`
+
+###Checking loop enabled: Forever is True###
+
+`do_run = False`
+
+###Notify when IP unchanged###
+
+`always_notify = True`
+
+###SMTP properties###
+
+`smtp_server = 'smtp.embarqmail.com`
+`smtp_port = 587`
+`smtp_user = 'someUserName'`
+`smtp_debug_level = 1;  # 1 or 0 works`
+`smtp_password = 'password'`
+
+###Email properties###
+
+`receivers = ['receiver1@somesite.com', 'receiver2@otherplace.org']`
+
+`message_template = """From: No-Reply<%s>
+
+To: Lou Mauget <mauget@mindspring.com>
+
+MIME-Version: 1.0
+
+Content-type: text/html
+
+Subject: DNS IP Tracking
+
+<table>
+<tr><th>DNS name</th><td>%s</td></tr>
+<tr><th>IP Change</th><td>%s</td></tr>
+<tr><th>Current IP</th><td>%s</td></tr>
+<tr><th>Cached IP</th><td>%s</td></tr>
+</table>
+<p>
+From DNS IP Checker
+</p>
+"""``
+
+###Tracking file name and location###
+
+`tracker_file = 'tracker_file.txt'`
