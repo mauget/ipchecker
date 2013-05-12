@@ -98,7 +98,7 @@ Value can be `True` or `False`. Case matters.
 
 ###SMTP properties###
 
-Get most of these from your email provider. Exception: the smtp_debug_level enables dumping extra information to stdout if set to non-zero.
+Get most of these from your email provider. Exception: the `smtp_debug_level` enables dumping extra information to `stdout` if set to non-zero.
 
 ---
 
@@ -111,6 +111,9 @@ Get most of these from your email provider. Exception: the smtp_debug_level enab
 ---
 
 ###Email properties###
+
+A comma-separated series of email recipient addresses enclosed in square brackets. Each address is surrounded by single or double quotes.
+You probably will use just one recipient, but this example shows how to specify a distribution list.
 
 ---
 
