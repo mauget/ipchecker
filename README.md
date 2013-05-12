@@ -5,6 +5,12 @@ Emails the IP address to an interested party when the target DNS name's IP addre
 
 ##Example of EMailed Notification##
 
+From: IP Checker &lt;ipchecker@hostsite.org&gt;
+
+To: Interested Party &lt;sombody@somesite.org&gt;
+
+Subject: DNS IP Tracking
+
 <table>
 <tr><th>DNS name	</th><td> www.somesite.com</td></tr>
 <tr><th>IP Change	</th><td> True             </td></tr>
@@ -13,6 +19,7 @@ Emails the IP address to an interested party when the target DNS name's IP addre
 </table>
 
 From DNS IP Checker
+
 
 ##MIT License##
 
