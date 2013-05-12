@@ -1,0 +1,4 @@
+*.log
+*.pyc
+props.py
+tracker_file.txt
