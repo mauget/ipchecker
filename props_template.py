@@ -4,7 +4,8 @@
 props.py
 
 Created by Lou Mauget on 2013-05-11.
-Written 2013. Free for any non-evil use.
+MIT License
+Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 Rename file to props.py and set values for your environment
 """
