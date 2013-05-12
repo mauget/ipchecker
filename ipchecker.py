@@ -8,9 +8,9 @@ MIT License
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 """
 import time
+import props
 import emailer
 import resolver
-import props
 import tracker
 
 def main(p):
@@ -18,10 +18,10 @@ def main(p):
 	do_run = True
 	while do_run:
 		ipaddr = resolver.get_ip_address(p)
-		old_ipaddr = tracker.get_tracker_value(p, ipaddr)
-		
-		print "Cached IP '" + old_ipaddr + "'"
 		print "Current IP '" + ipaddr + "'"
+		
+		old_ipaddr = tracker.get_tracker_value(p, ipaddr)
+		print "Cached IP '" + old_ipaddr + "'"
 
 		if old_ipaddr != ipaddr or p.always_notify:
 			emailer.send(p, ipaddr, old_ipaddr)

@@ -30,7 +30,7 @@ Linux, Mac OS, Microsoft Windows, ... any platform where Python 2.7.2 or greater
 
 ###Microsoft Windows Notes###
 
-Microsoft Windows has no default Python system installed. Choose and download a  Python for Micrsoft Windows from
+Microsoft Windows has no default Python system installed. Choose and download a  Python for Microsoft Windows from
 [http://www.python.org/getit/windows/](http://www.python.org/getit/windows/).
 
 ##Execution##

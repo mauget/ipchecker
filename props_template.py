@@ -47,5 +47,5 @@ Subject: DNS IP Tracking
 From DNS IP Checker
 </p>
 """
-# Tracking file
+# Tracking file name and location
 tracker_file = 'tracker_file.txt'
