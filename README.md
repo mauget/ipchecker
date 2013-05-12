@@ -57,9 +57,12 @@ will cause the process to carry out its check once per half hour._
 
 ##Configuration Notes##
 
+We tried to make the configuration keys/names self-explantory. Don't change the name on 
+the left side of the equal sign. Do set the value as desired.
+
 ###Target DNS###
 
-`dns_name = 'google.com'```
+`dns_name = 'google.com'`
 
 ###Checking interval in seconds###
 
@@ -85,26 +88,36 @@ will cause the process to carry out its check once per half hour._
 
 `receivers = ['receiver1@somesite.com', 'receiver2@otherplace.org']`
 
-`message_template = """From: No-Reply<%s>
+###Email message template###
 
-To: Lou Mauget <mauget@mindspring.com>
+`message_template = """From: No-Reply<%s>`
 
-MIME-Version: 1.0
+`To: Lou Mauget <mauget@mindspring.com>`
 
-Content-type: text/html
+`MIME-Version: 1.0`
 
-Subject: DNS IP Tracking
+`Content-type: text/html`
 
-<table>
-<tr><th>DNS name</th><td>%s</td></tr>
-<tr><th>IP Change</th><td>%s</td></tr>
-<tr><th>Current IP</th><td>%s</td></tr>
-<tr><th>Cached IP</th><td>%s</td></tr>
-</table>
-<p>
-From DNS IP Checker
-</p>
-"""``
+`Subject: DNS IP Tracking`
+
+`<table>`
+	
+`<tr><th>DNS name</th><td>%s</td></tr>`
+
+`<tr><th>IP Change</th><td>%s</td></tr>`
+
+`<tr><th>Current IP</th><td>%s</td></tr>`
+
+`<tr><th>Cached IP</th><td>%s</td></tr>`
+
+`</table>`
+
+`<p>`
+	
+`From DNS IP Checker`
+
+`</p>`
+``"""``
 
 ###Tracking file name and location###
 
