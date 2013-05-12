@@ -35,10 +35,12 @@ def read_from_tracker(p):
 	
 def get_tracker_value(p, cur_ipaddr):
 	old_ipaddr = ''
+	
 	if is_exist_tracker(p):
 		old_ipaddr = read_from_tracker(p)
 	else:
 		print "tracker not found"
-		write_to_tracker(p, cur_ipaddr)
+		
+	write_to_tracker(p, cur_ipaddr)
 	return old_ipaddr
 	
