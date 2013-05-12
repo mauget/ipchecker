@@ -68,9 +68,9 @@ the left side of the equal sign. Do set the value as desired.
 
 `interval = 60*30`
 
-###Checking loop enabled: Forever is True###
+###Checking loop enabled: True means forever###
 
-`do_run = False`
+`do_run = False` # Valid values: True or False - case-matters
 
 ###Notify when IP unchanged###
 
