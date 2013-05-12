@@ -5,6 +5,8 @@ Emails the IP address to an interested party when the target DNS name's IP addre
 
 ##Example of EMailed Notification##
 
+---
+
 From: IP Checker &lt;ipchecker@hostsite.org&gt;
 
 To: Interested Party &lt;sombody@somesite.org&gt;
@@ -20,12 +22,14 @@ Subject: DNS IP Tracking
 
 From DNS IP Checker
 
+---
 
 ##MIT License##
 
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 ##Platforms##
+
 Linux, Mac OS, Microsoft Windows, ... any platform where Python 2.7.2 or greater is available
 
 ##Installing##
@@ -34,6 +38,8 @@ Linux, Mac OS, Microsoft Windows, ... any platform where Python 2.7.2 or greater
  2. Rename `props_template.py` to `props.py`
  3. Edit the values of `props.py` for your environment and the desired behavior_
  4. `chmod 755 *.py` (unless installed on Microsoft Windows)
+
+**Important:** the script will cannot operate rationally for you unless you edit the values in step 3.
 
 ###Microsoft Windows Notes###
 
