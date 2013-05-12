@@ -62,21 +62,45 @@ the left side of the equal sign. Do set the value as desired.
 
 ###Target DNS###
 
+---
+
 `dns_name = 'google.com'`
+
+---
 
 ###Checking interval in seconds###
 
+---
+
 `interval = 60*30`
+
+---
 
 ###Checking loop enabled: True means forever###
 
-`do_run = False` # Valid values: True or False - case-matters
+Value can be `True` or `False`. Case matters.
+
+---
+
+`do_run = False`
+
+---
 
 ###Notify when IP unchanged###
 
+Value can be `True` or `False`. Case matters.
+
+---
+
 `always_notify = True`
 
+---
+
 ###SMTP properties###
+
+Get most of these from your email provider. Exception: the smtp_debug_level enables dumping extra information to stdout if set to non-zero.
+
+---
 
 `smtp_server = 'smtp.embarqmail.com`
 `smtp_port = 587`
@@ -84,11 +108,27 @@ the left side of the equal sign. Do set the value as desired.
 `smtp_debug_level = 1;  # 1 or 0 works`
 `smtp_password = 'password'`
 
+---
+
 ###Email properties###
+
+---
 
 `receivers = ['receiver1@somesite.com', 'receiver2@otherplace.org']`
 
+---
+
 ###Email message template###
+
+There are five '%s' substitution points in the message. These take the respective values of:
+
+1. `sender` -- sending email address configured above
+2. `dns_name` - target DNS name-of-interest configured above
+3. is_changed - value True or False - calculated
+4. revolved IP address of `dns_name` - queried
+5. cached previous IP address of `dns_name` - read from configured tracking file
+
+---
 
 `message_template = """From: No-Reply<%s>`
 
@@ -119,6 +159,17 @@ the left side of the equal sign. Do set the value as desired.
 `</p>`
 ``"""``
 
+---
+
 ###Tracking file name and location###
 
+---
+
 `tracker_file = 'tracker_file.txt'`
+
+---
+
+---
+
+Lou Mauget, mauget@mindspring.com
+
