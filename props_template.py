@@ -44,7 +44,7 @@ Subject: DNS IP Tracking
 <tr><th>Cached IP</th><td>%s</td></tr>
 </table>
 <p>
-From DNS IP Tracker
+From DNS IP Checker
 </p>
 """
 # Tracking file
