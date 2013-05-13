@@ -8,6 +8,8 @@ MIT License
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 """
 
+import logging
+
 def is_exist_tracker(p):
 	try:
 		with open(p.tracker_file): pass
@@ -22,6 +24,7 @@ def write_to_tracker(p, value):
 		fo.close();
 	except IOError:
 		print "IOError writing tracker file"
+		logging.error("IOError writing tracker file")
 		
 def read_from_tracker(p):
 	value = ""
@@ -30,7 +33,8 @@ def read_from_tracker(p):
 		value = fo.read()
 		fo.close();
 	except IOError:
-		print "IOError writing tracker file"
+		print "IOError reading tracker file"
+		logging.error("IOError reading tracker file")
 	return value
 	
 def get_tracker_value(p, cur_ipaddr):
@@ -39,7 +43,8 @@ def get_tracker_value(p, cur_ipaddr):
 	if is_exist_tracker(p):
 		old_ipaddr = read_from_tracker(p)
 	else:
-		print "tracker not found"
+		print "Tracker file not found"
+		logging.info("Tracker file not found")
 		
 	write_to_tracker(p, cur_ipaddr)
 	return old_ipaddr

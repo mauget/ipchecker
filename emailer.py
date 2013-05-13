@@ -8,6 +8,8 @@ MIT License
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 """
 
+import logging
+
 import smtplib
 	
 def send(p, cur_ipaddr, old_ipaddr):
@@ -20,4 +22,5 @@ def send(p, cur_ipaddr, old_ipaddr):
 	smtpObj.sendmail(p.sender, p.receivers, msg) 
        
 	print "Successfully sent email"
+	logging.info("Successfully sent email")
 	

@@ -48,3 +48,15 @@ From DNS IP Checker
 """
 # Tracking file name and location
 tracker_file = 'tracker_file.txt'
+
+# Logging parameters
+
+# logging_level = logging.WARN
+# logging_level = logging.INFO
+# logging_level = logging.DEBUG
+# logging_level = logging.ERROR
+# logging_level = logging.CRITICAL
+logging_level = logging.INFO
+
+logging_file = 'ipchecker.log'
+

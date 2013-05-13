@@ -3,7 +3,7 @@
 Periodically pings a configured DNS name, checking for an IP address reassignment.
 Emails the IP address to an interested party when the target DNS name's IP address changes.
 
-##Example of EMailed Notification##
+##Example of Emailed Notification##
 
 ---
 
@@ -55,7 +55,21 @@ If `props.do_run = True`, then the checking process will happen forever at inter
 defined by the number of seconds in `props.interval`. For example `props.interval = 30*60`
 will cause the process to carry out its check once per half hour._
 
-##Configuration Notes##
+##Logging##
+
+The script records a trace of its operation in a log file. 
+Logging level and log file name are controlled by `logging_level` and `logging_file` values in `props.py`.
+
+Example of logging file content:
+
+---
+INFO:2013-05-12 09:05:05 PM ipchecker started
+INFO:2013-05-12 09:05:05 PM Resolved "google.com". Current IP "74.125.228.102". Cached IP "74.125.228.100"
+INFO:2013-05-12 09:05:06 PM Successfully sent email
+INFO:2013-05-12 09:05:06 PM Sent email
+---
+
+##Configuration Notes for Props.py##
 
 We tried to make the configuration keys/names self-explantory. Don't change the name on 
 the left side of the equal sign. Do set the value as desired.
@@ -169,6 +183,24 @@ There are five '%s' substitution points in the message. These take the respectiv
 ---
 
 `tracker_file = 'tracker_file.txt'`
+
+---
+
+###Logging###
+
+Valid logging level value are one of:
+
+* logging.INFO
+* logging.WARN
+* logging.DEBUG
+* logging.ERROR
+* logging.CRITICAL
+
+---
+
+`logging_level = logging.INFO`
+
+`logging_file = 'ipchecker.log'`
 
 ---
 
