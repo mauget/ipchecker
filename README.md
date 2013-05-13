@@ -123,9 +123,13 @@ Get most of these from your email provider. Exception: the `smtp_debug_level` en
 ---
 
 `smtp_server = 'smtp.embarqmail.com`
+
 `smtp_port = 587`
+
 `smtp_user = 'someUserName'`
+
 `smtp_debug_level = 1;  # 1 or 0 works`
+
 `smtp_password = 'password'`
 
 ---
