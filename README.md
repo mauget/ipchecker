@@ -32,7 +32,7 @@ Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 Linux, Mac OS, Microsoft Windows, ... any platform where Python 2.7.2 or greater is available
 
-##Installing##
+##Installation##
 
  1. Copy the `*.py` files to your desired installation directory
  2. Rename `props_template.py` to `props.py`
@@ -41,7 +41,7 @@ Linux, Mac OS, Microsoft Windows, ... any platform where Python 2.7.2 or greater
 
 **Important:** the script will cannot operate rationally for you unless you edit the values in step 3.
 
-###Microsoft Windows Notes###
+###Microsoft Windows###
 
 Microsoft Windows has no default Python system installed. Choose and download a  Python for Microsoft Windows from
 [http://www.python.org/getit/windows/](http://www.python.org/getit/windows/).
@@ -63,10 +63,14 @@ Logging level and log file name are controlled by `logging_level` and `logging_f
 Example of logging file content:
 
 ---
-INFO:2013-05-12 09:05:05 PM ipchecker started
-INFO:2013-05-12 09:05:05 PM Resolved "google.com". Current IP "74.125.228.102". Cached IP "74.125.228.100"
-INFO:2013-05-12 09:05:06 PM Successfully sent email
-INFO:2013-05-12 09:05:06 PM Sent email
+
+`INFO:2013-05-12 09:05:05 PM ipchecker started`
+
+`INFO:2013-05-12 09:05:05 PM Resolved "google.com". Current IP "74.125.228.102". Cached IP "74.125.228.100"`
+
+`INFO:2013-05-12 09:05:06 PM Successfully sent email`
+
+
 ---
 
 ##Configuration Notes for Props.py##
