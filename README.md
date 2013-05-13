@@ -75,7 +75,7 @@ Example of logging file content:
 
 ---
 
-##Configuration Notes for Props.py##
+##Configuration notes for props.py##
 
 We tried to make the configuration keys/names self-explantory. Don't change the name on 
 the left side of the equal sign. Do set the value as desired.
