@@ -77,7 +77,7 @@ Example of logging file content:
 
 ##Configuration notes for props.py##
 
-We tried to make the configuration keys/names self-explantory. Don't change the name on 
+We tried to make the configuration keys/names self-explanatory. Don't change the name on 
 the left side of the equal sign. Do set the value as desired.
 
 ###Target DNS###
@@ -157,7 +157,7 @@ There are five '%s' substitution points in the message. These take the respectiv
 
 ---
 
-`message_template = """From: No-Reply<%s>`
+`message_template = """From: DNS IP Tradker <%s>`
 
 `To: Lou Mauget <mauget@mindspring.com>`
 
@@ -198,7 +198,7 @@ There are five '%s' substitution points in the message. These take the respectiv
 
 ###Logging###
 
-Valid logging level value are one of:
+Valid logging level value is choice of:
 
 * logging.INFO
 * logging.WARN
