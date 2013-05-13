@@ -30,6 +30,7 @@ def main(p):
 
 		if old_ipaddr != ipaddr or p.always_notify:
 			emailer.send(p, ipaddr, old_ipaddr)
+			print "Sent email"
 
 		do_run = p.do_run
 		time.sleep(p.interval)

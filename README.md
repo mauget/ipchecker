@@ -3,7 +3,9 @@
 Periodically pings a configured DNS name, checking for an IP address reassignment.
 Emails the IP address to an interested party when the target DNS name's IP address changes.
 
-##Example of Emailed Notification##
+##Emailed notification##
+
+Configured from a template in `props.py`:
 
 ---
 
@@ -24,7 +26,7 @@ From DNS IP Checker
 
 ---
 
-##MIT License##
+##MIT license##
 
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
