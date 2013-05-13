@@ -9,6 +9,9 @@ Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 Rename file to props.py and set values for your environment
 """
+
+import logging
+
 # Target DNS
 dns_name = 'DNS name to be monitored'
 
