@@ -21,16 +21,16 @@ def main(p):
 	do_run = True
 	while do_run:
 		ipaddr = resolver.get_ip_address(p)
-		print "Current IP '" + ipaddr + "'"
+		print("Current IP '" + ipaddr + "'")
 		
 		old_ipaddr = tracker.get_tracker_value(p, ipaddr)
-		print "Cached IP '" + old_ipaddr + "'"
+		print("Cached IP '" + old_ipaddr + "'")
 		
 		logging.info('Resolved "%s". Current IP "%s". Cached IP "%s"', p.dns_name, ipaddr, old_ipaddr)
 
 		if old_ipaddr != ipaddr or p.always_notify:
 			emailer.send(p, ipaddr, old_ipaddr)
-			print "Sent email"
+			print("Sent email")
 
 		do_run = p.do_run
 		time.sleep(p.interval)

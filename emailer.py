@@ -21,6 +21,6 @@ def send(p, cur_ipaddr, old_ipaddr):
 	smtpObj.login(p.smtp_user, p.smtp_password)
 	smtpObj.sendmail(p.sender, p.receivers, msg) 
        
-	print "Successfully sent email"
+	print("Successfully sent email")
 	logging.info("Successfully sent email")
 	

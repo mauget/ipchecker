@@ -32,7 +32,7 @@ Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 ##Platforms##
 
-Linux, Mac OS, Microsoft Windows, ... any platform where Python 2.7.2 or greater is available
+Linux, Mac OS, Microsoft Windows, ... any platform where a Python 2.7.2, or a Python 3 version, is available
 
 ##Installation##
 
