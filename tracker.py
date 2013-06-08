@@ -23,7 +23,7 @@ def write_to_tracker(p, value):
 		fo.write(value)
 		fo.close();
 	except IOError:
-		print "IOError writing tracker file"
+		print("IOError writing tracker file")
 		logging.error("IOError writing tracker file")
 		
 def read_from_tracker(p):
@@ -33,7 +33,7 @@ def read_from_tracker(p):
 		value = fo.read()
 		fo.close();
 	except IOError:
-		print "IOError reading tracker file"
+		print("IOError reading tracker file")
 		logging.error("IOError reading tracker file")
 	return value
 	
@@ -43,7 +43,7 @@ def get_tracker_value(p, cur_ipaddr):
 	if is_exist_tracker(p):
 		old_ipaddr = read_from_tracker(p)
 	else:
-		print "Tracker file not found"
+		print("Tracker file not found")
 		logging.info("Tracker file not found")
 		
 	write_to_tracker(p, cur_ipaddr)
