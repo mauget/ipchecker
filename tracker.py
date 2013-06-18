@@ -10,42 +10,42 @@ Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 import logging
 
-def is_exist_tracker(p):
+def is_exist_tracker(fn):
 	try:
-		with open(p.tracker_file): pass
+		with open(fn): pass
 		return True
 	except IOError:
 		return False
 		
-def write_to_tracker(p, value):
+def write_to_tracker(fn, value):
 	try:
-		fo = open(p.tracker_file, "w")
+		fo = open(fn, "w")
 		fo.write(value)
 		fo.close();
 	except IOError:
-		print("IOError writing tracker file")
-		logging.error("IOError writing tracker file")
+		print("IOError writing tracker file " + fn)
+		logging.error("IOError writing tracker file " + fn)
 		
-def read_from_tracker(p):
+def read_from_tracker(fn):
 	value = ""
 	try:
-		fo = open(p.tracker_file, "r")
+		fo = open(fn, "r")
 		value = fo.read()
 		fo.close();
 	except IOError:
-		print("IOError reading tracker file")
-		logging.error("IOError reading tracker file")
+		print("IOError reading tracker file " + fn)
+		logging.error("IOError reading tracker file " + fn)
 	return value
 	
-def get_tracker_value(p, cur_ipaddr):
+def get_tracker_value(fn, cur_ipaddr):
 	old_ipaddr = ''
 	
-	if is_exist_tracker(p):
-		old_ipaddr = read_from_tracker(p)
+	if is_exist_tracker(fn):
+		old_ipaddr = read_from_tracker(fn)
 	else:
-		print("Tracker file not found")
-		logging.info("Tracker file not found")
+		print("Tracker file not found " + fn)
+		logging.info("Tracker file not found " + fn)
 		
-	write_to_tracker(p, cur_ipaddr)
+	write_to_tracker(fn, cur_ipaddr)
 	return old_ipaddr
 	

@@ -1,11 +1,13 @@
-#ipchecker#
+#ipchecker - multi#
 
-Periodically pings a configured DNS name, checking for an IP address reassignment.
-Emails the IP address to an interested party when the target DNS name's IP address changes.
+Periodically pings a list of configured DNS names, checking each for an IP address reassignment.
+Emails the before and after IP addresses to an interested party when a target DNS name's IP address changes.
+All files reside in a single flat directory. 
 
 ##Emailed notification##
 
-Configured from a template in `props.py`:
+Governed by a template in `props.py`. It should work unchanged. You could alter it to suit 
+after you see the script operate for you.
 
 ---
 
@@ -13,7 +15,7 @@ From: IP Checker &lt;ipchecker@hostsite.org&gt;
 
 To: Interested Party &lt;sombody@somesite.org&gt;
 
-Subject: DNS IP Tracking
+Subject: www.somesite.com IP Tracking
 
 <table>
 <tr><th>DNS name	</th><td> www.somesite.com</td></tr>
@@ -32,7 +34,8 @@ Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 ##Platforms##
 
-Linux, Mac OS, Microsoft Windows, ... any platform where a Python 2.7.2, or a Python 3 version, is available
+Linux, Mac OS, Microsoft Windows, ... any platform where a Python 2.7.2, or greater is available. 
+This includes Python 3 versions.
 
 ##Installation##
 
@@ -41,7 +44,7 @@ Linux, Mac OS, Microsoft Windows, ... any platform where a Python 2.7.2, or a Py
  3. Edit the values of `props.py` for your environment and the desired behavior_
  4. `chmod 755 *.py` (unless installed on Microsoft Windows)
 
-**Important:** the script will cannot operate rationally for you unless you edit the values in step 3.
+**Important:** the script cannot operate rationally for you unless you edit the values in step 3.
 
 ###Microsoft Windows###
 
@@ -84,7 +87,7 @@ the left side of the equal sign. Do set the value as desired.
 
 ---
 
-`dns_name = 'google.com'`
+`dns_name = ['google.com']`
 
 ---
 
@@ -102,7 +105,7 @@ Value can be `True` or `False`. Case matters.
 
 ---
 
-`do_run = False`
+`do_run = True`
 
 ---
 
@@ -147,25 +150,27 @@ You probably will use just one recipient, but this example shows how to specify 
 
 ###Email message template###
 
-There are five '%s' substitution points in the message. These take the respective values of:
+There are five '%s' substitution points in the message. Top to bottom, these take the respective values of:
 
 1. `sender` -- sending email address configured above
 2. `dns_name` - target DNS name-of-interest configured above
-3. is_changed - value True or False - calculated
-4. revolved IP address of `dns_name` - queried
-5. cached previous IP address of `dns_name` - read from configured tracking file
+3. `dns_name` - target DNS name-of-interest configured above
+4. is_changed - value True or False - calculated
+5. revolved IP address of `dns_name` - queried
+6. cached previous IP address of `dns_name` - read from configured tracking file
 
 ---
 
-`message_template = """From: DNS IP Tradker <%s>`
+`message_template = """From: DNS Tracker<%s>`
 
-`To: Lou Mauget <mauget@mindspring.com>`
+`To: Lou Mauget<mauget@mindspring.com>`
 
 `MIME-Version: 1.0`
 
 `Content-type: text/html`
 
-`Subject: DNS IP Tracking`
+`Subject: %s IP Tracking`
+
 
 `<table>`
 	
@@ -184,6 +189,7 @@ There are five '%s' substitution points in the message. These take the respectiv
 `From DNS IP Checker`
 
 `</p>`
+
 ``"""``
 
 ---
@@ -216,5 +222,5 @@ Valid logging level value is choice of:
 
 ---
 
-Lou Mauget, mauget@mindspring.com, 2013-05-12
+Lou Mauget, mauget@mindspring.com, 2013-06-17
 
