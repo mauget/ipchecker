@@ -3,7 +3,7 @@
 """
 props.py
 
-Created by Lou Mauget on 2013-05-11.
+Created by Lou Mauget on 2013-05-17.
 MIT License
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
@@ -13,31 +13,31 @@ Rename file to props.py and set values for your environment
 import logging
 
 # Target DNS
-dns_name = 'DNS name to be monitored'
+dns_name = ['DNS name to be monitored', 'somedns.org', 'somedns.com']
 
 # Interval in seconds; loop continuation is do_run value; Forever is True
 interval = 60*30
-do_run = False
+do_run = True
 
 # Notify even if IP didn't change
-always_notify = False
+always_notify = True
 
 # SMTP properties
 smtp_server = 'your smtp server address'
 smtp_port = 587
 smtp_user = 'smtp user name'
-smtp_password = 'smtp password here'
+smtp_password = 'smtp password'
 smtp_debug_level = 1;  # 1 or 0 works
 
 # Email properties
 sender = 'user@email.net'
 receivers = ['sombody@someorg.org', 'somebodyelse@otherplace.com']
 
-message_template = """From: %s
-To: Somebody <sombody@someorg.org>
+message_template = """From: DNS Tracker<%s>
+To: Lou Mauget<mauget@mindspring.com>
 MIME-Version: 1.0
 Content-type: text/html
-Subject: DNS IP Tracking
+Subject: %s IP Tracking
 
 <table>
 <tr><th>DNS name</th><td>%s</td></tr>
@@ -50,7 +50,7 @@ From DNS IP Checker
 </p>
 """
 # Tracking file name and location
-tracker_file = 'tracker_file.txt'
+tracker_file = 'tracker_file_%s.txt'
 
 # Logging parameters
 
