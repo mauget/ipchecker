@@ -1,10 +1,10 @@
-# ipchecker - multi#
+# ipchecker - multi
 
 Periodically pings a list of configured DNS names, checking each for an IP address reassignment.
 Emails the before and after IP addresses to an interested party when a target DNS name's IP address changes.
 All files reside in a single flat directory. 
 
-## Emailed notification##
+## Emailed notification
 
 Governed by a template in `props.py`. It should work unchanged. You could alter it to suit 
 after you see the script operate for you.
@@ -28,16 +28,16 @@ From DNS IP Checker
 
 ---
 
-## MIT license##
+## MIT license
 
 Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
-## Platforms##
+## Platforms
 
 Linux, Mac OS, Microsoft Windows, ... any platform where a Python 2.7.2, or greater is available. 
 This includes Python 3 versions.
 
-## Installation##
+## Installation
 
  1. Copy the `*.py` files to your desired installation directory
  2. Rename `props_template.py` to `props.py`
@@ -46,12 +46,12 @@ This includes Python 3 versions.
 
 **Important:** the script cannot operate rationally for you unless you edit the values in step 3.
 
-### Microsoft Windows###
+### Microsoft Windows
 
 Microsoft Windows has no default Python system installed. Choose and download a  Python for Microsoft Windows from
 [http://www.python.org/getit/windows/](http://www.python.org/getit/windows/).
 
-## Execution##
+## Execution
 
 In the installation directory use `.\ipchecker.py`.  If using Microsoft Windows
 issue `./ipchecker.py` or invoke `python ipchecker.py`.
@@ -60,7 +60,7 @@ If `props.do_run = True`, then the checking process will happen forever at inter
 defined by the number of seconds in `props.interval`. For example `props.interval = 30*60`
 will cause the process to carry out its check once per half hour._
 
-## Logging##
+## Logging
 
 The script records a trace of its operation in a log file. 
 Logging level and log file name are controlled by `logging_level` and `logging_file` values in `props.py`.
@@ -78,12 +78,12 @@ Example of logging file content:
 
 ---
 
-## Configuration notes for props.py##
+## Configuration notes for props.py
 
 We tried to make the configuration keys/names self-explanatory. Don't change the name on 
 the left side of the equal sign. Do set the value as desired.
 
-### Target DNS###
+### Target DNS
 
 ---
 
@@ -91,7 +91,7 @@ the left side of the equal sign. Do set the value as desired.
 
 ---
 
-### Checking interval in seconds###
+### Checking interval in seconds
 
 ---
 
@@ -99,7 +99,7 @@ the left side of the equal sign. Do set the value as desired.
 
 ---
 
-### Checking loop enabled: True means forever###
+### Checking loop enabled: True means forever
 
 Value can be `True` or `False`. Case matters.
 
@@ -109,7 +109,7 @@ Value can be `True` or `False`. Case matters.
 
 ---
 
-### Notify when IP unchanged###
+### Notify when IP unchanged
 
 Value can be `True` or `False`. Case matters.
 
@@ -119,7 +119,7 @@ Value can be `True` or `False`. Case matters.
 
 ---
 
-### SMTP properties###
+### SMTP properties
 
 Get most of these from your email provider. Exception: the `smtp_debug_level` enables dumping extra information to `stdout` if set to non-zero.
 
@@ -137,7 +137,7 @@ Get most of these from your email provider. Exception: the `smtp_debug_level` en
 
 ---
 
-### Email properties###
+### Email properties
 
 A comma-separated series of email recipient addresses enclosed in square brackets. Each address is surrounded by single or double quotes.
 You probably will use just one recipient, but this example shows how to specify a distribution list.
@@ -148,7 +148,7 @@ You probably will use just one recipient, but this example shows how to specify 
 
 ---
 
-### Email message template###
+### Email message template
 
 There are five '%s' substitution points in the message. Top to bottom, these take the respective values of:
 
@@ -194,7 +194,7 @@ There are five '%s' substitution points in the message. Top to bottom, these tak
 
 ---
 
-### Tracking file name and location###
+### Tracking file name and location
 
 ---
 
