@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # encoding: utf-8
 """
 resolver.py
@@ -10,7 +10,8 @@ Copyright (c) 2013 Louis E. Mauget, mauget@mindspring.com
 
 import socket
 
+
 # Resolve DNS name to IP address
 def get_ip_address(dns_nm):
-	ipaddr = socket.gethostbyname(dns_nm) 
-	return ipaddr
+    ipaddr = socket.gethostbyname(dns_nm)
+    return ipaddr

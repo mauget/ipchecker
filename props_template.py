@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # encoding: utf-8
 """
 props.py
@@ -27,7 +27,7 @@ smtp_server = 'your smtp server address'
 smtp_port = 587
 smtp_user = 'smtp user name'
 smtp_password = 'smtp password'
-smtp_debug_level = 1;  # 1 or 0 works
+smtp_debug_level = 1  # 1 or 0 works
 
 # Email properties
 sender = 'user@email.net'
@@ -37,7 +37,7 @@ message_template = """From: DNS Tracker<%s>
 To: Lou Mauget<mauget@mindspring.com>
 MIME-Version: 1.0
 Content-type: text/html
-Subject: %s IP Tracking
+Subject: %s IP tracking
 
 <table>
 <tr><th>DNS name</th><td>%s</td></tr>
@@ -49,6 +49,16 @@ Subject: %s IP Tracking
 From DNS IP Checker
 </p>
 """
+
+message_template_txt = """
+From: DNS Tracker %s
+Subject: %s IP tracking
+DNS name: %s
+IP change: %s
+Current IP: %s
+Cached IP: %s
+"""
+
 # Tracking file name and location
 tracker_file = 'tracker_file_%s.txt'
 
